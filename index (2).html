@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام تسجيل الحضور والانصراف</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>نظام تسجيل الحضور والانصراف</h1>
+        <form id="attendance-form">
+            <label for="teacher-id">رقم المعلم:</label>
+            <input type="text" id="teacher-id" name="teacher-id" required>
+            
+            <label for="teacher-name">اسم المعلم:</label>
+            <input type="text" id="teacher-name" name="teacher-name" required>
+            
+            <label for="attendance-type">نوع التسجيل:</label>
+            <select id="attendance-type" name="attendance-type">
+                <option value="حضور">حضور</option>
+                <option value="انصراف">انصراف</option>
+            </select>
+            
+            <button type="submit">تسجيل</button>
+        </form>
+        
+        <h2>سجل الحضور والانصراف</h2>
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>رقم المعلم</th>
+                    <th>اسم المعلم</th>
+                    <th>نوع التسجيل</th>
+                    <th>التاريخ</th>
+                    <th>الوقت</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- السجلات ستضاف هنا -->
+            </tbody>
+        </table>
+        
+        <h2>تسجيل باستخدام الباركود</h2>
+        <button id="start-scanner">تفعيل الكاميرا</button>
+        <div id="scanner-container"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
